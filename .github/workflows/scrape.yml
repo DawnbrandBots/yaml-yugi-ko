@@ -1,0 +1,28 @@
+# SPDX-FileCopyrightText: © 2022 Kevin Lu
+# SPDX-Licence-Identifier: LGPL-3.0-or-later
+name: Scrape official database for card text
+
+on:
+  workflow_dispatch:
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-python@v3
+        with:
+          python-version: "3.8"
+          cache: pip
+      - run: pip install -r src/requirements.txt
+      - run: curl -fsSLO https://github.com/DawnbrandBots/yaml-yugi/raw/aggregate/cards.json
+      - run: python3 src/job.py cards.json official
+      - name: Commit
+        if: ${{ always() }}
+        run: |
+          git config user.name GitHub Actions
+          git config user.email noreply@github.com
+          git add .
+          git commit -m "Scrape official Korean card database"
+          git pull --rebase
+          git push
