@@ -30,28 +30,28 @@ def get_card(client: httpx.Client, konami_id: int) -> Optional[CardText]:
 
     if len(name_element):
         if len(name_element) > 1:
-            print("WARNING: Multiple name tags detected, using first", flush=True)
+            print(f"{konami_id}\tWARNING: Multiple name tags detected, using first", flush=True)
         # Grab the first text node child and skip the remaining, which should be the English name that we don't need
         name = name_element[0].next.strip()
     else:
-        print("WARNING: No name tags detected", flush=True)
-        name = None
+        print(f"{konami_id}\tWARNING: No name tags detected", flush=True)
+        return None
 
     if len(text_element):
         if len(text_element) > 1:
-            print("WARNING: Multiple text tags detected, using first", flush=True)
+            print(f"{konami_id}\tWARNING: Multiple text tags detected, using first", flush=True)
         # Remove <div class="text_title"> but preserve <br /> as newlines
         text_element[0].find("div").clear()
         for br in text_element[0].find_all("br"):
             br.replace_with("\n")
         text = text_element[0].text.strip()
     else:
-        print("WARNING: No text tags detected", flush=True)
-        text = None
+        print(f"{konami_id}\tWARNING: No text tags detected", flush=True)
+        return None
 
     if len(pendulum_element):
         if len(pendulum_element) > 1:
-            print("WARNING: Multiple Pendulum text tags detected, using first", flush=True)
+            print(f"{konami_id}\tWARNING: Multiple Pendulum text tags detected, using first", flush=True)
         for br in pendulum_element[0].find_all("br"):
             br.replace_with("\n")
         pendulum = pendulum_element[0].text.strip()

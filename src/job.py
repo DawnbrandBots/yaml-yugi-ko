@@ -23,8 +23,11 @@ def get_card_retry(client: Client, konami_id: int) -> Optional[Dict[str, Any]]:
                 print(f"{konami_id}\tNOT FOUND", flush=True)
                 return
         except HTTPStatusError as e:
-            print(f"{konami_id}\tFAIL {e.response.status_code}", flush=True)
-            return
+            print(f"{konami_id}\tTRY {retry}\tFAIL {e.response.status_code}", flush=True)
+            if e.response.is_server_error:
+                time.sleep(1)
+            else:
+                return
         except RequestError as e:
             print(f"{konami_id}\tTRY {retry}\t{e}", flush=True)
             time.sleep(1)
@@ -52,6 +55,8 @@ if __name__ == "__main__":
                 continue
 
             card = get_card_retry(client, kid)
+            if card is None:
+                continue
 
             card["text"] = LiteralScalarString(card["text"])
             if card["pendulum"]:
