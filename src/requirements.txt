@@ -8,7 +8,7 @@ anyio==3.6.1
     # via httpcore
 beautifulsoup4==4.11.1
     # via -r requirements.in
-certifi==2022.6.15
+certifi==2022.12.7
     # via
     #   httpcore
     #   httpx
@@ -32,8 +32,6 @@ rfc3986[idna2008]==1.5.0
     # via httpx
 ruamel-yaml==0.17.21
     # via -r requirements.in
-ruamel-yaml-clib==0.2.6
-    # via ruamel-yaml
 sniffio==1.2.0
     # via
     #   anyio
@@ -41,5 +39,3 @@ sniffio==1.2.0
     #   httpx
 soupsieve==2.3.2.post1
     # via beautifulsoup4
-typing-extensions==4.3.0
-    # via anyio
