@@ -16,7 +16,7 @@ jobs:
           cache: pip
       - run: pip install -r src/requirements.txt
       - run: curl -fsSLO https://github.com/DawnbrandBots/yaml-yugi/raw/aggregate/rush.json
-      - run: python3 src/job.py rushdb cards.json official
+      - run: python3 src/job.py rushdb rush.json rush
       - name: Commit
         if: ${{ always() }}
         run: |
