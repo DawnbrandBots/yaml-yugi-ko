@@ -1,4 +1,4 @@
-# SPDX-FileCopyrightText: © 2022 Kevin Lu
+# SPDX-FileCopyrightText: © 2022–2023 Kevin Lu
 # SPDX-Licence-Identifier: AGPL-3.0-or-later
 import json
 import os
@@ -13,10 +13,10 @@ from ruamel.yaml.scalarstring import LiteralScalarString
 from scraper import get_card
 
 
-def get_card_retry(client: Client, konami_id: int) -> Optional[Dict[str, Any]]:
+def get_card_retry(client: Client, konami_id: int, database: str) -> Optional[Dict[str, Any]]:
     for retry in range(5):
         try:
-            card = get_card(client, konami_id)
+            card = get_card(client, konami_id, database)
             if card:
                 return card._asdict()
             else:
@@ -34,18 +34,19 @@ def get_card_retry(client: Client, konami_id: int) -> Optional[Dict[str, Any]]:
 
 
 if __name__ == "__main__":
-    if len(sys.argv) < 2:
-        sys.exit(f"Usage: {sys.argv[0]} <cards.json> [output directory]")
+    if len(sys.argv) < 3:
+        sys.exit(f"Usage: {sys.argv[0]} <yugiohdb|rushdb> <cards.json> [output directory]")
 
-    file = sys.argv[1]
+    target = sys.argv[1]
+    file = sys.argv[2]
     with open(file) as handle:
         cards = json.load(handle)
     print(f"Found {len(cards)} cards.", flush=True)
     ids = [card["konami_id"] for card in cards if card.get("konami_id")]
     print(f"Using {len(cards)} ids.", flush=True)
 
-    if len(sys.argv) > 2:
-        os.chdir(sys.argv[2])
+    if len(sys.argv) > 3:
+        os.chdir(sys.argv[3])
 
     with Client(http2=True) as client:
         yaml = YAML()
@@ -54,7 +55,7 @@ if __name__ == "__main__":
                 print(f"{kid}\tSKIP", flush=True)
                 continue
 
-            card = get_card_retry(client, kid)
+            card = get_card_retry(client, kid, target)
             if card is None:
                 continue
 

@@ -1,4 +1,4 @@
-# SPDX-FileCopyrightText: © 2022 Kevin Lu
+# SPDX-FileCopyrightText: © 2022–2023 Kevin Lu
 # SPDX-Licence-Identifier: AGPL-3.0-or-later
 from typing import NamedTuple, Optional
 
@@ -12,14 +12,15 @@ class CardText(NamedTuple):
     pendulum: Optional[str]
 
 
-def get_card(client: httpx.Client, konami_id: int) -> Optional[CardText]:
+def get_card(client: httpx.Client, konami_id: int, database: str) -> Optional[CardText]:
     """
     Parses card text from the website. HTTP errors are raised. Rate limits are recorded in client.rate_limit
     :param client: HTTPX Client. May support HTTP2 but shouldn't have defaults that majorly change behaviour.
     :param konami_id: Card to fetch.
+    :param database: yugiohdb OR rushdb
     :return: HTTP exceptions propagated, otherwise a NamedTuple of the result.
     """
-    url = f"https://www.db.yugioh-card.com/yugiohdb/card_search.action?ope=2&request_locale=ko&cid={konami_id}"
+    url = f"https://www.db.yugioh-card.com/{database}/card_search.action?ope=2&request_locale=ko&cid={konami_id}"
     response = client.get(url, follow_redirects=True)
     response.raise_for_status()
 
