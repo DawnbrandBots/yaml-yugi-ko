@@ -6,6 +6,10 @@ on:
   workflow_dispatch:
   workflow_call:
 
+concurrency:
+  group: ${{ github.workflow }}
+  cancel-in-progress: true
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -23,6 +27,7 @@ jobs:
           export DATETIME=$(date -Is)
           cat _site/index.html | DATE=$(date -I) envsubst '$DATE$DATETIME' >_site/index.html
           echo "$DATETIME" > _site/VERSION
+      - uses: actions/configure-pages@v2
       - uses: actions/upload-pages-artifact@v1
   deploy:
     needs: build

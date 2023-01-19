@@ -4,6 +4,8 @@ name: Scrape official database for card text
 
 on:
   workflow_dispatch:
+  schedule:
+    - cron: "30 19 * * *"
 
 jobs:
   scrape:
