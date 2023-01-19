@@ -26,3 +26,5 @@ jobs:
           git commit -m "Scrape official Korean card database"
           git pull --rebase
           git push
+  upload:
+    uses: ./.github/workflows/publish.yml

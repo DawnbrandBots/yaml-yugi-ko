@@ -1,0 +1,38 @@
+# SPDX-FileCopyrightText: © 2023 Kevin Lu
+# SPDX-Licence-Identifier: LGPL-3.0-or-later
+name: Publish aggregations to GitHub Pages
+
+on:
+  workflow_dispatch:
+  workflow_call:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-python@v3
+        with:
+          python-version: "3.10"
+          cache: pip
+      - run: pip install -r src/requirements.txt
+      - name: Aggregate
+        run: |
+          python3 src/as_csv.py official _site/ocg.csv
+          python3 src/as_sql.py official _site/ocg.db3
+          export DATETIME=$(date -Is)
+          cat _site/index.html | DATE=$(date -I) envsubst '$DATE$DATETIME' >_site/index.html
+          echo "$DATETIME" > _site/VERSION
+      - uses: actions/upload-pages-artifact@v1
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    steps:
+      - id: deploy
+        uses: actions/deploy-pages@v1
