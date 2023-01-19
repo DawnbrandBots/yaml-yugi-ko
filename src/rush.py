@@ -1,4 +1,4 @@
-# SPDX-FileCopyrightText: © 2022 Kevin Lu
+# SPDX-FileCopyrightText: © 2023 Kevin Lu
 # SPDX-Licence-Identifier: AGPL-3.0-or-later
 import json
 import os
@@ -10,15 +10,18 @@ from httpx import Client, HTTPStatusError, RequestError
 from ruamel.yaml import YAML
 from ruamel.yaml.scalarstring import LiteralScalarString
 
-from scraper import get_card
+from scraper import get_rush
 
 
 def get_card_retry(client: Client, konami_id: int) -> Optional[Dict[str, Any]]:
     for retry in range(5):
         try:
-            card = get_card(client, konami_id)
+            card = get_rush(client, konami_id)
             if card:
-                return card._asdict()
+                card = card._asdict()
+                card["text"] = LiteralScalarString(card["text"])
+                card.pop("pendulum")
+                return card
             else:
                 print(f"{konami_id}\tNOT FOUND", flush=True)
                 return
@@ -35,7 +38,7 @@ def get_card_retry(client: Client, konami_id: int) -> Optional[Dict[str, Any]]:
 
 if __name__ == "__main__":
     if len(sys.argv) < 2:
-        sys.exit(f"Usage: {sys.argv[0]} <cards.json> [output directory]")
+        sys.exit(f"Usage: {sys.argv[0]} <rush.json> [output directory]")
 
     file = sys.argv[1]
     with open(file) as handle:
@@ -57,12 +60,6 @@ if __name__ == "__main__":
             card = get_card_retry(client, kid)
             if card is None:
                 continue
-
-            card["text"] = LiteralScalarString(card["text"])
-            if card["pendulum"]:
-                card["pendulum"] = LiteralScalarString(card["pendulum"])
-            else:
-                card.pop("pendulum")
 
             with open(f"{kid}.yaml", mode="w", encoding="utf-8") as out:
                 yaml.dump(card, out)

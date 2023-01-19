@@ -1,6 +1,6 @@
 # SPDX-FileCopyrightText: © 2022–2023 Kevin Lu
 # SPDX-Licence-Identifier: LGPL-3.0-or-later
-name: Scrape OCG database for card text
+name: Scrape official database for card text
 
 on:
   workflow_dispatch:
@@ -12,11 +12,11 @@ jobs:
       - uses: actions/checkout@v3
       - uses: actions/setup-python@v3
         with:
-          python-version: "3.8"
+          python-version: "3.10"
           cache: pip
       - run: pip install -r src/requirements.txt
       - run: curl -fsSLO https://github.com/DawnbrandBots/yaml-yugi/raw/aggregate/cards.json
-      - run: python3 src/job.py yugiohdb cards.json official
+      - run: python3 src/job.py cards.json official
       - name: Commit
         if: ${{ always() }}
         run: |

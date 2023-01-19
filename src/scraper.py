@@ -12,15 +12,14 @@ class CardText(NamedTuple):
     pendulum: Optional[str]
 
 
-def get_card(client: httpx.Client, konami_id: int, database: str) -> Optional[CardText]:
+def get_card(client: httpx.Client, konami_id: int) -> Optional[CardText]:
     """
     Parses card text from the website. HTTP errors are raised. Rate limits are recorded in client.rate_limit
     :param client: HTTPX Client. May support HTTP2 but shouldn't have defaults that majorly change behaviour.
     :param konami_id: Card to fetch.
-    :param database: yugiohdb OR rushdb
     :return: HTTP exceptions propagated, otherwise a NamedTuple of the result.
     """
-    url = f"https://www.db.yugioh-card.com/{database}/card_search.action?ope=2&request_locale=ko&cid={konami_id}"
+    url = f"https://www.db.yugioh-card.com/yugiohdb/card_search.action?ope=2&request_locale=ko&cid={konami_id}"
     response = client.get(url, follow_redirects=True)
     response.raise_for_status()
 
@@ -60,3 +59,41 @@ def get_card(client: httpx.Client, konami_id: int, database: str) -> Optional[Ca
         pendulum = None
 
     return CardText(name, text, pendulum)
+
+
+def get_rush(client: httpx.Client, konami_id: int) -> Optional[CardText]:
+    """
+    Parses card text from the website. HTTP errors are raised. Rate limits are recorded in client.rate_limit
+    :param client: HTTPX Client. May support HTTP2 but shouldn't have defaults that majorly change behaviour.
+    :param konami_id: Card to fetch.
+    :return: HTTP exceptions propagated, otherwise a NamedTuple of the result.
+    """
+    url = f"https://www.db.yugioh-card.com/rushdb/card_search.action?ope=2&request_locale=ko&cid={konami_id}"
+    response = client.get(url, follow_redirects=True)
+    response.raise_for_status()
+
+    soup = BeautifulSoup(response.text, "html.parser")
+    name_element = soup.select("#card_title > h1 > span")
+    text_element = soup.select("#CardText .item_box_text")
+
+    if len(name_element):
+        if len(name_element) > 1:
+            print(f"{konami_id}\tWARNING: Multiple name tags detected, using first", flush=True)
+        name = name_element[0].next.strip()
+    else:
+        print(f"{konami_id}\tWARNING: No name tags detected", flush=True)
+        return None
+
+    if len(text_element):
+        if len(text_element) > 1:
+            print(f"{konami_id}\tWARNING: Multiple text tags detected, using first", flush=True)
+        # Remove <div class="item_box_title"> but preserve <br /> as newlines
+        text_element[0].find("div").clear()
+        for br in text_element[0].find_all("br"):
+            br.replace_with("\n")
+        text = text_element[0].text.strip()
+    else:
+        print(f"{konami_id}\tWARNING: No text tags detected", flush=True)
+        return None
+
+    return CardText(name, text, None)
