@@ -29,4 +29,5 @@ jobs:
           git pull --rebase
           git push
   upload:
+    needs: scrape
     uses: ./.github/workflows/publish.yml
