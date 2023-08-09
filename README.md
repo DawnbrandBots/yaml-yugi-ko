@@ -32,3 +32,52 @@ I did not find an adequate two-way synchronization solution between GitHub and G
 This repository could expand in the future to cover additional content, such as:
 - updating old cards for modern effect syntax
 - unofficial cards exclusive to the anime, manga, or video games
+
+### Usage of the translation files
+
+**[`ocg-overrides.csv`](./ocg-overrides.csv)**
+
+- OCG cards with outdated or incorrect Korean errata on the official database
+- OCG cards that are missing Korean ruby text in their names on the official database
+
+The pipeline will match cards based on `konami_id`. You may specify other identifiers for reference,
+but they will be ignored.
+
+`name` should have ruby text annotated using HTML markup, e.g. `<ruby>BF<rt>블랙 페더</rt></ruby>－극북의 블리자드`.
+If a card is not a Pendulum Monster or has no Pendulum Effect, leave `pendulum` empty.
+It will be ignored anyway.
+
+**[`ocg-prerelease.csv`](./ocg-prerelease.csv)**
+
+- OCG cards not yet released in Korea and thus not on the Korean official database yet
+
+The pipeline will match cards based on `yugipedia_page_id`. You may specify other identifiers for
+reference, but they will be ignored. If text from the Korean official database is found, the row
+will be ignored, and may be automatically flagged for removal. The same guidelines for `name` and
+`pendulum` apply.
+
+**[`rush-overrides.csv`](./rush-overrides.csv)**
+
+- Rush Duel cards with outdated or incorrect Korean errata on the official database
+- Rush Duel cards that are missing Korean ruby text in their names on the official database
+
+The pipeline will match cards based on `konami_id`. You may specify other identifiers for reference,
+but they will be ignored.
+
+The columns correspond to the [YAML Yugi schema for Rush Duel cards](https://github.com/DawnbrandBots/api-v8-definitions/blob/master/rush.ts).
+If a column does not apply to the type of card, leave it blank, as it will be ignored anyway.
+
+Required columns:
+- Spell/Trap: `requirement` and `effect`.
+- Main Deck Effect Monster: `requirement` and `effect`. Do not specify the effect type in `effect`.
+  Fill in `summoning_condition` if needed, e.g. Maximum Monsters, Cyber Dragon.
+- Fusion Effect Monster: `materials`, `requirement`, and `effect`. Do not specify the effect type in `effect`.
+- Non-Effect Monster: `text`. For Fusion Non-Effect Monsters, this is the `materials`.
+
+**[`rush-prerelease.csv`](./rush-prerelease.csv)**
+
+- Rush Duel cards not yet released in Korea and thus not on the Korean official database yet
+
+The pipeline will match cards based on `yugipedia_page_id`. You may specify other identifiers for
+reference, but they will be ignored. If text from the Korean official database is found, the row
+will be ignored, and may be automatically flagged for removal. The same guidelines for columns apply.
