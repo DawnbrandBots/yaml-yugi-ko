@@ -35,7 +35,7 @@ This repository could expand in the future to cover additional content, such as:
 
 ### Usage of the translation files
 
-**[`ocg-overrides.csv`](./ocg-overrides.csv)**
+**[`ocg-override.csv`](./ocg-override.csv)**
 
 - OCG cards with outdated or incorrect Korean errata on the official database
 - OCG cards that are missing Korean ruby text in their names on the official database
@@ -56,7 +56,7 @@ reference, but they will be ignored. If text from the Korean official database i
 will be ignored, and may be automatically flagged for removal. The same guidelines for `name` and
 `pendulum` apply.
 
-**[`rush-overrides.csv`](./rush-overrides.csv)**
+**[`rush-override.csv`](./rush-override.csv)**
 
 - Rush Duel cards with outdated or incorrect Korean errata on the official database
 - Rush Duel cards that are missing Korean ruby text in their names on the official database
