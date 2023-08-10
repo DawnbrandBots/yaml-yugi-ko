@@ -68,11 +68,13 @@ The columns correspond to the [YAML Yugi schema for Rush Duel cards](https://git
 If a column does not apply to the type of card, leave it blank, as it will be ignored anyway.
 
 Required columns:
+- All: `name` should have ruby text annotated using HTML markup like `ocg-override.csv`
 - Spell/Trap: `requirement` and `effect`.
 - Main Deck Effect Monster: `requirement` and `effect`. Do not specify the effect type in `effect`.
   Fill in `summoning_condition` if needed, e.g. Maximum Monsters, Cyber Dragon.
 - Fusion Effect Monster: `materials`, `requirement`, and `effect`. Do not specify the effect type in `effect`.
-- Non-Effect Monster: `text`. For Fusion Non-Effect Monsters, this is the `materials`.
+- Non-Effect Monster: `non_effect_monster_text`. This means the flavour text for Normal Monsters and
+  the `materials` for Fusion Non-Effect Monsters.
 
 **[`rush-prerelease.csv`](./rush-prerelease.csv)**
 
