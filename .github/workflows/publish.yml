@@ -24,7 +24,7 @@ jobs:
       - run: pip install -r src/requirements.txt
       - name: Aggregate
         run: |
-          python3 src/as_csv.py official _site/ocg.csv
+          python3 src/as_csv.py official _site/ocg.csv --with-pendulum
           python3 src/as_sql.py official _site/ocg.db3
           export DATETIME=$(date -Is)
           cat _site/index.html | DATE=$(date -I) envsubst '$DATE$DATETIME' >_site/index.html
