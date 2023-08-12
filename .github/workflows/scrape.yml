@@ -20,7 +20,8 @@ jobs:
           python-version: "3.10"
           cache: pip
       - run: pip install -r src/requirements.txt
-      - run: python3 src/dump.py ko _site/ocg.csv
+      - run: python3 src/dump.py yugiohdb ko _site/ocg.csv
+      - run: python3 src/dump.py rushdb ko _site/rush.csv
       - id: commit
         uses: DawnbrandBots/yaml-yugi/.github/actions/commit-push@master
         with:
