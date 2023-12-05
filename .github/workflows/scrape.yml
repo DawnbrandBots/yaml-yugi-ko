@@ -23,7 +23,7 @@ jobs:
       - run: python3 src/dump.py yugiohdb ko _site/ocg.csv
       - run: python3 src/dump.py rushdb ko _site/rush.csv
       - id: commit
-        uses: DawnbrandBots/yaml-yugi/.github/actions/commit-push@master
+        uses: DawnbrandBots/.github/actions/commit-push@main
         with:
           message: "Scrape official Korean card database: ${{ github.run_number }} (${{ github.run_id }})"
       - if: steps.commit.outputs.status > 0
