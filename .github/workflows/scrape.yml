@@ -32,8 +32,10 @@ jobs:
           export DATETIME=$(date -Is)
           cat _site/index.html | DATE=$(date -I) envsubst '$DATE$DATETIME' >_site/index.html
           echo "$DATETIME" > _site/VERSION
-      - uses: actions/configure-pages@v4
-      - uses: actions/upload-pages-artifact@v2
+      - if: steps.commit.outputs.status > 0
+        uses: actions/configure-pages@v4
+      - if: steps.commit.outputs.status > 0
+        uses: actions/upload-pages-artifact@v2
   deploy:
     needs: scrape
     if: needs.scrape.outputs.status > 0 && !cancelled()
