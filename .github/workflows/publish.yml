@@ -30,7 +30,7 @@ jobs:
           cat _site/index.html | DATE=$(date -I) envsubst '$DATE$DATETIME' >_site/index.html
           echo "$DATETIME" > _site/VERSION
       - uses: actions/configure-pages@v4
-      - uses: actions/upload-pages-artifact@v2
+      - uses: actions/upload-pages-artifact@v3
   deploy:
     needs: build
     runs-on: ubuntu-latest
