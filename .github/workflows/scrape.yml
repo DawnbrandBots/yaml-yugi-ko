@@ -35,7 +35,7 @@ jobs:
       - if: steps.commit.outputs.status > 0
         uses: actions/configure-pages@v4
       - if: steps.commit.outputs.status > 0
-        uses: actions/upload-pages-artifact@v2
+        uses: actions/upload-pages-artifact@v3
   deploy:
     needs: scrape
     if: needs.scrape.outputs.status > 0 && !cancelled()
