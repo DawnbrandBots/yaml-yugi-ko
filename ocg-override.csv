@@ -769,7 +769,7 @@ yugipedia_page_id,konami_id,password,name,text,pendulum,comments
 ,15633,,{Evil★Twin(이빌트윈)} 이지게임,,,ruby data
 ,15634,,{Evil★Twin(이빌트윈)} 프레젠트,,,ruby data
 ,15702,,{S－Force(시큐리티 포스)} 난파소야환,,,ruby data
-,15703,,{S－Force(시큐리티 포스)} 프로페서 {?(디감마)},,,ruby data
+,15703,,{S－Force(시큐리티 포스)} 프로페서 {Ϝ(디감마)},,,ruby data
 ,15704,,{S－Force(시큐리티 포스)} 오리피스,,,ruby data
 ,15705,,{S－Force(시큐리티 포스)} 그라비티노,,,ruby data
 ,15706,,{S－Force(시큐리티 포스)} 플라＝티나,,,ruby data
@@ -798,17 +798,17 @@ yugipedia_page_id,konami_id,password,name,text,pendulum,comments
 ,16011,,{RUM(랭크 업 매직)}－제알 포스,,,ruby data
 ,16021,,메구리－{Ai(아이)}－,,,ruby data
 ,16022,,유우－{Ai(아이)}－,,,ruby data
-,16032,,{A?∀?CC(어메이즈 어트랙션 싸이크론코스터)},,,ruby data
-,16033,,{A?∀?WW(어메이즈 어트랙션 원더휠)},,,ruby data
-,16034,,{A?∀?MM(어메이즈 어트랙션 마제스틱마네주)},,,ruby data
-,16035,,{A?∀?RR(어메이즈 어트랙션 라피도레이싱)},,,ruby data
-,16036,,{A?∀?HH(어메이즈 어트랙션 호러하우스)},,,ruby data
+,16032,,{A・∀・CC(어메이즈 어트랙션 싸이크론코스터)},,,ruby data
+,16033,,{A・∀・WW(어메이즈 어트랙션 원더휠)},,,ruby data
+,16034,,{A・∀・MM(어메이즈 어트랙션 마제스틱마네주)},,,ruby data
+,16035,,{A・∀・RR(어메이즈 어트랙션 라피도레이싱)},,,ruby data
+,16036,,{A・∀・HH(어메이즈 어트랙션 호러하우스)},,,ruby data
 ,16037,,하타시－{Ai(아이)}－,,,ruby data
 ,16038,,{S－Force(시큐리티 포스)} 체이스,,,ruby data
 ,16209,,어메이즈먼트 어시스턴트 ＜{Delia(딜라이아)}＞,,,ruby data
 ,16213,,인공지능 {ME(메)}－{PSY(싸이)}－{YA(야)},,,ruby data
 ,16251,,{Live☆Twin(라이브트윈)} 트러블상,,,ruby data
-,16265,,{A?∀?VV(어메이즈 어트랙션 뱅키시바이킹)},,,ruby data
+,16265,,{A・∀・VV(어메이즈 어트랙션 뱅키시바이킹)},,,ruby data
 ,16274,,맞찌르{GUY(가이)},,,ruby data
 ,16376,,{SR(스피드로이드)} 취지 동자,,,ruby data
 ,16377,,{SR(스피드로이드)} 매직하운드,,,ruby data
@@ -885,7 +885,7 @@ yugipedia_page_id,konami_id,password,name,text,pendulum,comments
 ,17453,,{EN(이엔느)}－인게이지 네오스페이스,,,ruby data
 ,17456,,{EN(이엔느)} 웨이브,,,ruby data
 ,17467,,{P.U.N.K.(펑크)}{JAM(잼)} 익스트림 세션,,,ruby data
-,17479,,{A?∀?TT(어메이즈 어트랙션 스릴트레인)},,,ruby data
+,17479,,{A・∀・TT(어메이즈 어트랙션 스릴트레인)},,,ruby data
 ,17596,,{D(디포머)}·텔레폰,,,ruby data
 ,17598,,{D(디포머)}·스캐넌,,,ruby data
 ,17599,,{D(디포머)}·이어폰,,,ruby data
@@ -968,12 +968,12 @@ yugipedia_page_id,konami_id,password,name,text,pendulum,comments
 ,18736,,{VS(뱅키시 소울)} 컨티뉴,,,ruby data
 ,18737,,{VS(뱅키시 소울)} 트리니티 버스트,,,ruby data
 ,18738,,{VS(뱅키시 소울)} 캘러미티 카이저,,,ruby data
-,18745,,{Nouvellez Auberge 『? Table』(누벨즈 오베르쥬 아 따블르)},,,ruby data
+,18745,,{Nouvellez Auberge 『À Table』(누벨즈 오베르쥬 아 따블르)},,,ruby data
 ,18746,,{Voici la Carte(브와씨 라 꺄흐트)}~메뉴는 이쪽에~,,,ruby data
 ,18747,,{Recette de Poisson(흐쎄트 드 쁘아쏭)}~생선요리 요리법~,,,ruby data
 ,18748,,{Recette de Viande(흐쎄트 드 비앙드)}~고기요리 요리법~,,,ruby data
 ,18749,,{Recette de Personnel(흐쎄트 드 뻬흐쏘넬)}~스태프 식사 요리법~,,,ruby data
-,18750,,{Recette de Sp?cialit?(흐쎄트 드 스페시알리떼)}~셰프의 특제 요리법~,,,ruby data
+,18750,,{Recette de Spécialité(흐쎄트 드 스페시알리떼)}~셰프의 특제 요리법~,,,ruby data
 ,18808,,천극휘사－베어트론{α(알파)},,,ruby data
 ,18809,,{R－ACE(레스큐 에이스)} 프리벤터,,,ruby data
 ,18845,,{EMERGENCY(이멀전시)}!,,,ruby data
