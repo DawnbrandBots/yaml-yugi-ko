@@ -642,14 +642,14 @@ yugipedia_page_id,konami_id,password,name,text,pendulum,comments
 ,13371,,{SPYRAL(스파이랄)}－더 더블헬릭스,,,ruby data
 ,13448,,{GUY(가이)} 댄스,,,ruby data
 ,13530,,{LAN(랜)} 포링쿠스,,,ruby data
-,13532,,스모 스피릿 {YOKO(요코)}－{ZUNA(즈나)},,,ruby data
-,13533,,가라데 스피릿 {KURO(쿠로)}－{OBI(오비)},,,ruby data
+,13532,,스모 스피릿 {YOKO－ZUNA(요코즈나)},,,ruby data
+,13533,,가라데 스피릿 {KURO－OBI(쿠로오비)},,,ruby data
 ,13538,,{F.A.(포뮬러 애슬리트)} 카네비게이터,,,ruby data
 ,13539,,{F.A.(포뮬러 애슬리트)} 홈트랜스포터,,,ruby data
 ,13540,,{F.A.(포뮬러 애슬리트)} 시티 {GP(그랑프리)},,,ruby data
 ,13541,,{F.A.(포뮬러 애슬리트)} 셰이크다운,,,ruby data
 ,13700,,{EM(엔터메이트)} 클레이브레이커,,,ruby data
-,13702,,켄도 스피릿 {KAI(카이)}－{DEN(덴)},,,ruby data
+,13702,,켄도 스피릿 {KAI－DEN(카이덴)},,,ruby data
 ,13709,,{F.A.(포뮬러 애슬리트)} 다크니스마스터,,,ruby data
 ,13710,,{F.A.(포뮬러 애슬리트)} 라이트닝마스터,,,ruby data
 ,13711,,{F.A.(포뮬러 애슬리트)} 위너즈,,,ruby data
@@ -733,12 +733,14 @@ yugipedia_page_id,konami_id,password,name,text,pendulum,comments
 ,14863,,{Ai(아이)}의 의식,,,ruby data
 ,14878,,{Ai(아이)}섀도우,,,ruby data
 ,14921,,주바바 반초－{GC(가가가 코트)},,,ruby data
+,14921,,도도도 드워프－{GG(고고고 글로브)},,,ruby data
 ,14925,,{EM(엔터메이트)} 천공의 마술사,,,ruby data
 ,14927,,{EM(엔터메이트)} 팝업,,,ruby data
 ,14956,,슈팅 스타 드래곤 {TG(테크지너스)}－{EX(익스팬션)},,,ruby data
 ,14958,,{FNo.(퓨처 넘버즈)}0 미래용황 호프,,,ruby data
 ,14961,,{DDD(디디디)} 사구왕 바이스 레퀴엠,,,ruby data
 ,14989,,샐러맨그레이트 제브로이드{X(엑스)},,,ruby data
+,15033,,프록시 {F(에프)} 매지션,,,ruby data
 ,15036,,디 어라이벌 사이버스{＠(앳)}이그니스터,,,ruby data
 ,15042,,{Ai(아이)}－콘택트,,,ruby data
 ,15059,,{Ai(아이)}－{Q(큐)},,,ruby data
@@ -833,9 +835,10 @@ yugipedia_page_id,konami_id,password,name,text,pendulum,comments
 ,16473,,{HRUM(하이퍼 랭크 업 매직)}－토피아 포스,,,ruby data
 ,16522,,바렐로드 {R(라이엇)} 드래곤,,,ruby data
 ,16537,,{Evil★Twin's(이빌트윈스)} 트러블 써니,,,ruby data
+,16627,,{D·D·D(디퍼런트 디멘션 더비)},,,ruby data
 ,16724,,{Uk(우키요에)}－{P.U.N.K.(펑크)} 샤라쿠사이,,,ruby data
 ,16725,,{Ga(가가쿠)}－{P.U.N.K.(펑크)} 와곤,,,ruby data
-,16726,,{Jo(조루리)}－{P.U.N.K.(펑크)}{Mme.(마담)} 스파이더,,,ruby data
+,16726,,{Jo(조루리)}－{P.U.N.K.Mme.(펑크마담)} 스파이더,,,ruby data
 ,16727,,{No(노)}－{P.U.N.K.(펑크)} 세아민,,,ruby data
 ,16728,,{No(노)}－{P.U.N.K.(펑크)} 폭시 튠,,,ruby data
 ,16729,,{No(노)}－{P.U.N.K.(펑크)} 오우거 넘버,,,ruby data
