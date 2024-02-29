@@ -41,7 +41,8 @@ This repository could expand in the future to cover additional content, such as:
 - OCG cards that are missing Korean ruby text in their names on the official database
 
 The pipeline will match cards based on `konami_id`. You may specify other identifiers for reference,
-but they will be ignored.
+but they will be ignored. Once a card is matched, any of `name`, `text`, or `pendulum` that are not
+blank will replace existing data from other sources.
 
 `name` should have ruby text annotated using HTML markup, e.g. `<ruby>BF<rt>블랙 페더</rt></ruby>－극북의 블리자드`.
 If a card is not a Pendulum Monster or has no Pendulum Effect, leave `pendulum` empty.
