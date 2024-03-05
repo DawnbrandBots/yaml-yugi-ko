@@ -17,6 +17,9 @@ yugipedia_page_id,konami_id,password,name,text,pendulum,comments
 ●5개: 필드의 ""사운드 워리어"" 카드의 수 × 300 데미지를 상대에게 준다.
 ●7개: 필드의 ""사운드 워리어"" 카드의 수까지, 상대의 필드 / 묘지의 카드를 고르고 제외한다.",,omitted erratum: https://www.yugioh.co.kr/board/board_info.php?b_category=important&b_no=170
 ,12029,,사운드 워리어 마이크스,"①: 이 카드는 자신 필드의 음향 카운터를 3개 제거하고, 패에서 특수 소환할 수 있다. ②: 이 카드가 일반 소환 / 특수 소환에 성공한 턴에, 자신은 통상 소환 외에도 1번만, 자신 메인 페이즈에 몬스터 1장을 일반 소환할 수 있다.","①: 다른 한쪽 자신의 펜듈럼 존에 ""사운드 워리어"" 카드가 존재하지 않을 경우, 이 카드의 펜듈럼 스케일은 4 가 된다. ②: 자신 엔드 페이즈에, 제외되어 있는 자신의 ""사운드 워리어"" 몬스터 1장을 대상으로 하고 발동할 수 있다. 그 몬스터를 패에 넣는다.",omitted erratum: https://www.yugioh.co.kr/board/board_info.php?b_category=important&b_no=170
+,4239,,악몽의 암흑 마신,,,difference with printed version: http://www.card09.com/upload/goods/c1207795345_333.gif
+,4745,,마법의 어릿광대,"""마법의 어릿광대""의 ②의 효과는 1턴에 1번밖에 사용할 수 없다. ①: 이 카드가 몬스터 존에 존재하는 한, 자신은 통상 소환 외에도 1번만, 자신 메인 페이즈에 마법사족 몬스터 1장을 앞면 공격 표시로 어드밴스 소환할 수 있다. ②: 이 카드가 필드에서 묘지로 보내졌을 경우에 발동할 수 있다. 자신의 덱 / 묘지에서 마법사족의 일반 몬스터 1장을 고르고 패에 넣는다.",,difference with printed version: http://www.tcgshop.co.kr/upload/goods/c46977_DP16-KR003.jpg
+,5481,,최후라면 함께,"""최후라면 함께""는 1턴에 1장밖에 발동할 수 없다. ①: 서로의 패가 3장 이상의 경우에 발동할 수 있다. 서로 패를 전부 좋아하는 순서대로 덱의 아래로 되돌리고, 자신은 이 효과로 서로 덱으로 되돌린 카드의 수 × 300 LP를 상실한다. 그 후, 서로 덱에서 5장 드로우한다.",,difference with printed version: http://www.tcgshop.co.kr/upload/goods/c46982_DP16-KR005.jpg
 ,6075,,네크로페이스,"이 카드가 일반 소환에 성공했을 때, 게임에서 제외되어 있는 카드를 전부 덱으로 돌리고 셔플한다. 이 카드의 공격력은 이 효과로 덱으로 되돌린 카드의 매수 × 100 포인트 올린다. 이 카드가 게임에서 제외되었을 때, 양쪽 플레이어는 덱 위에서 카드를 5장 게임에서 제외한다.",,difference with printed version: http://www.tcgshop.co.kr/upload/goods/c08613_PP04-KR024.jpg
 ,6555,,다크 레드 인챈터,"이 카드가 일반 소환에 성공했을 때, 이 카드에 마력 카운터를 2개 놓는다. 이 카드가 필드 위에 앞면 표시로 존재하는 한, 자신 또는 상대가 마법 카드를 발동할 때마다, 이 카드에 마력 카운터를 1개 놓는다. 이 카드에 얹혀 있는 마력 카운터 1개당, 이 카드의 공격력은 300 포인트 올린다. 1턴에 1번, 이 카드에 얹혀 있는 마력 카운터를 2개 제거하는 것으로, 상대의 패를 무작위로 1장 버린다.",,difference with printed version: http://www.tcgshop.co.kr/upload/goods/c35702_SD16-KR008.jpg
 ,6645,,황금의 호문쿨루스,"이 카드의 공격력과 수비력은,게임에서 제외되어 있는 자신의 카드 수 × 300 포인트 올린다.",,difference with printed version: http://www.tcgshop.co.kr/upload/goods/c08850_PP04-KR020.jpg
@@ -24,6 +27,7 @@ yugipedia_page_id,konami_id,password,name,text,pendulum,comments
 ,6647,,헬리오스 듀오 메기스트스,"이 카드는 자신 필드 위의 ""원시태양 헬리오스"" 1장을 릴리스하는 것으로 특수 소환할 수 있다. 이 카드의 공격력과 수비력은, 게임에서 제외되어 있는 몬스터 카드의 수 × 200 포인트가 된다. 이 카드가 전투에 의해서 파괴되어 묘지에 보내졌을 경우, 엔드 페이즈시에 공격력 / 수비력을 300 포인트 올리고 특수 소환된다.",,difference with printed version: http://www.tcgshop.co.kr/upload/goods/c08688_PP04-KR022.jpg
 ,7018,,메탈 슈터,"이 카드가 일반 소환에 성공했을 때, 이 카드에 카운터를 2개 놓는다. 이 효과에 의해서 카드에 얹은 카운터 1개당, 이 카드의 공격력은 800 포인트 올린다. 이 카드가 다른 카드의 효과에 의해서 파괴될 경우, 대신에 이 카드의 카운터를 1개 제거한다.",,difference with printed version: http://www.tcgshop.co.kr/upload/goods/c08310_PP04-KR028.jpg
 ,7019,,데스 모스키토,"이 카드가 일반 소환 / 특수 소환에 성공했을 때, 이 카드에 카운터를 2개 놓는다. 이 효과에 의해서 카드에 얹은 카운터 1개당, 이 카드의 공격력은 500 포인트 올린다. 이 카드가 전투에 의해서 파괴될 경우, 대신에 이 카드의 카운터를 1개 제거한다.",,difference with printed version: http://www.tcgshop.co.kr/upload/goods/c07522_PP04-KR030.jpg
+,7269,,다이아몬드더스트 싸이클론,,,difference with printed version: http://www.tcgshop.co.kr/upload/goods/c77749_GLAS-KR048.jpg
 ,7332,,듀얼 서머너,"상대의 엔드 페이즈시에 1번만 500 라이프 포인트를 지불하고 발동할 수 있다. 패 또는 자신 필드 위에 앞면 표시로 존재하는 듀얼 몬스터 1장을 일반 소환 / 세트한다. 또한, 이 카드는 1턴에 1번만, 전투로는 파괴되지 않는다.",,difference with printed version: http://www.tcgshop.co.kr/upload/goods/c35005_TP05-KR003.jpg
 ,7334,,사우전드 아이즈 피시,"이 카드는 일반 소환 / 세트할 수 없다. 자신 필드 위에 존재하는 ""오션즈 오퍼"" 1장을 릴리스한 경우에만 특수 소환할 수 있다. 이 카드가 자신 필드 위에 앞면 표시로 존재하는 한, 상대는 패를 계속해서 공개해야 한다.",,difference with printed version: http://www.tcgshop.co.kr/upload/goods/c68048_EXP1-KR005.jpg
 ,7335,,마더 브레인,"이 카드는 자신 필드 위에 존재하는 ""오션즈 오퍼"" 1장을 릴리스하고, 패에서 특수 소환할 수 있다. 패에서 물 속성 몬스터 1장을 묘지에 버리는 것으로, 필드 위에 세트된 카드 1장을 파괴한다.",,difference with printed version: http://www.tcgshop.co.kr/upload/goods/c68076_EXP1-KR006.jpg
@@ -42,6 +46,8 @@ yugipedia_page_id,konami_id,password,name,text,pendulum,comments
 ,8091,,스타더스트 드래곤 / 버스터,"이 카드는 일반 소환 / 세트할 수 없다. ""버스터 모드""의 효과 및 이 카드의 효과로만 특수 소환할 수 있다. 마법 / 함정 / 효과 몬스터의 효과가 발동했을 때, 이 카드를 릴리스하는 것으로 그 발동을 무효로 하고 파괴한다. 이 효과를 적용한 턴의 엔드 페이즈시, 이 효과를 발동하기 위해 릴리스되어 묘지에 존재하는 이 카드를 자신 필드 위에 특수 소환할 수 있다. 또한, 필드 위에 존재하는 이 카드가 파괴되었을 때, 자신의 묘지에 존재하는 ""스타더스트 드래곤"" 1장을 특수 소환할 수 있다.",,difference with printed version: http://www.tcgshop.co.kr/upload/goods/c29037_DP09-KR001.jpg
 ,8604,,원헌드레드 아이 드래곤,"어둠 속성 튜너 + 튜너 이외의 악마족 몬스터 1장 이상1턴에 1번, 자신의 묘지에 존재하는 레벨 6 이하의 어둠 속성의 효과 몬스터 1장을 게임에서 제외하고 발동할 수 있다. 이 카드는 이 턴의 엔드 페이즈시까지, 이 효과를 발동하기 위해 게임에서 제외한 효과 몬스터와 같은 이름의 카드로 취급하고, 같은 효과를 얻는다. 또한, 이 카드가 파괴되어 묘지로 보내졌을 때, 자신의 덱에서 ""지박신""이라는 이름이 붙은 몬스터 1장을 패에 넣는다.",,difference with printed version: http://www.tcgshop.co.kr/upload/goods/c82433_PP06-KR015.jpg
 ,9016,,스카아 워리어,"튜너 ＋ 튜너 이외의 몬스터 1장 이상이 카드가 필드 위에 앞면 표시로 존재하는 한, 상대는 앞면 표시로 존재하는 다른 전사족 몬스터를 공격 대상으로 선택할 수 없다. 또한, 이 카드는 1턴에 1번만, 전투로는 파괴되지 않는다.",,difference with printed version: http://www.tcgshop.co.kr/upload/goods/c86184_PP06-KR028.jpg
+,10566,,쿠로클로크로우,,,difference with printed version: http://www.tcgshop.co.kr/upload/goods/c90894_ST13-KR008.jpg
+,11307,,얼음 제왕가신 에셔,,,difference with printed version: http://www.tcgshop.co.kr/upload/goods/c29530_SR01-KR013.jpg
 ,7790,,수신기왕 바르바로스￹Ur￺우르￻,,,ruby data
 ,7874,,￹D￺디포머￻·모바폰,,,ruby data
 ,7875,,￹D￺디포머￻·마그넨U,,,ruby data
@@ -148,7 +154,7 @@ yugipedia_page_id,konami_id,password,name,text,pendulum,comments
 ,9510,,￹TG￺테크지너스￻ 레시프로 드래곤 플라이,,,ruby data
 ,9511,,￹TG￺테크지너스￻ 원더 매지션,,,ruby data
 ,9512,,￹TG￺테크지너스￻ 파워 글래디에이터,,,ruby data
-,9513,,￹TG￺테크지너스￻ 브레이드 건맨,,,ruby data
+,9513,,￹TG￺테크지너스￻ 블레이드 건맨,,,"ruby data, difference with printed version: http://www.tcgshop.co.kr/upload/goods/c88685_EXVC-KR042UR.jpg"
 ,9514,,￹TG￺테크지너스￻ 할 버드 캐논,,,ruby data
 ,9554,,￹TG￺테크지너스￻ 하이퍼 라이브러리언,,,ruby data
 ,9874,,￹M.X￺미싱 엑스￻－세이버 인보커,,,ruby data
