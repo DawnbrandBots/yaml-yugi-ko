@@ -15,8 +15,9 @@ if TYPE_CHECKING:
 
 def download_all(db: Literal["yugiohdb", "rushdb"], locale: str) -> str:
     prime_url = f"https://www.db.yugioh-card.com/{db}/card_search.action?ope=1&sess=1&keyword=&stype=1&ctype=&starfr=&starto=&pscalefr=&pscaleto=&linkmarkerfr=&linkmarkerto=&link_m=2&atkfr=&atkto=&deffr=&defto=&othercon=2&request_locale={locale}"
-    dump_url = f"https://www.db.yugioh-card.com/{db}/card_search.action?ope=1&sess=2&sort=20&rp=99999&page=1&stype=1&othercon=2&page=1&request_locale={locale}"
-    with Client(http2=True, follow_redirects=True, headers={"Referer": "https://www.db.yugioh-card.com/"}, timeout=Timeout(5, read=10)) as client:
+    # Use sort=20 for release date
+    dump_url = f"https://www.db.yugioh-card.com/{db}/card_search.action?ope=1&sess=2&sort=1&rp=99999&page=1&stype=1&othercon=2&page=1&request_locale={locale}"
+    with Client(http2=True, follow_redirects=True, headers={"Referer": "https://www.db.yugioh-card.com/"}, timeout=Timeout(5, read=15)) as client:
         client.get(prime_url).raise_for_status()
         response = client.get(dump_url)
         response.raise_for_status()
