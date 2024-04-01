@@ -33,7 +33,7 @@ jobs:
           cat _site/index.html | DATE=$(date -I) envsubst '$DATE$DATETIME' >_site/index.html
           echo "$DATETIME" > _site/VERSION
       - if: steps.commit.outputs.status > 0
-        uses: actions/configure-pages@v4
+        uses: actions/configure-pages@v5
       - if: steps.commit.outputs.status > 0
         uses: actions/upload-pages-artifact@v3
   deploy:
