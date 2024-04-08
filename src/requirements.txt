@@ -30,7 +30,7 @@ idna==3.4
     # via
     #   anyio
     #   httpx
-lxml==5.2.0
+lxml==5.2.1
     # via -r requirements.in
 ruamel-yaml==0.18.6
     # via -r requirements.in
