@@ -32,12 +32,12 @@ def replace_text_breaks(element: "Tag") -> str:
 
 def parse_card_text(div: "Tag", with_pendulum: bool) -> Tuple[str, str, str, str | None]:
     cid_input = div.select_one("input.cid")
-    # Alternate: span.card_name
-    name_input = div.select_one("input.cnm")
+    # The value of input.cnm is not usable for all cases due to bad inlining of apostrophes in the HTML
+    name_span = div.select_one("span.card_name")
     text_dd = div.select_one("dd.box_card_text")
 
     konami_id = cid_input["value"]
-    name = name_input["value"]
+    name = name_span.text
     text = replace_text_breaks(text_dd)
 
     if with_pendulum:
