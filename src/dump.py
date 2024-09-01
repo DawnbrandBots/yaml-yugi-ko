@@ -37,7 +37,8 @@ def parse_card_text(div: "Tag", with_pendulum: bool) -> Tuple[str, str, str, str
     text_dd = div.select_one("dd.box_card_text")
 
     konami_id = cid_input["value"]
-    name = name_span.text.strip()
+    # Exclude any LEGEND badges
+    name = next(name_span.strings).strip()
     text = replace_text_breaks(text_dd)
 
     if with_pendulum:
