@@ -8,7 +8,7 @@ anyio==4.7.0
     # via httpx
 beautifulsoup4==4.12.3
     # via -r requirements.in
-certifi==2024.8.30
+certifi==2024.12.14
     # via
     #   httpcore
     #   httpx
