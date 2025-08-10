@@ -4,7 +4,7 @@
 #
 #    pip-compile
 #
-anyio==4.9.0
+anyio==4.10.0
     # via httpx
 beautifulsoup4==4.13.4
     # via -r requirements.in
