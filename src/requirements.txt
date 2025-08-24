@@ -30,7 +30,7 @@ idna==3.10
     #   httpx
 lxml==6.0.0
     # via -r requirements.in
-ruamel-yaml==0.18.14
+ruamel-yaml==0.18.15
     # via -r requirements.in
 ruamel-yaml-clib==0.2.12
     # via ruamel-yaml
