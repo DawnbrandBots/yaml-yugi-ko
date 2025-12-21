@@ -30,9 +30,9 @@ idna==3.11
     #   httpx
 lxml==6.0.2
     # via -r requirements.in
-ruamel-yaml==0.18.16
+ruamel-yaml==0.18.17
     # via -r requirements.in
-ruamel-yaml-clib==0.2.14
+ruamel-yaml-clib==0.2.15
     # via ruamel-yaml
 soupsieve==2.8
     # via beautifulsoup4
