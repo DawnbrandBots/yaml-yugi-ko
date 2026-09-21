@@ -39,7 +39,8 @@ def parse_card_text(div: "Tag", with_pendulum: bool) -> Tuple[str, str, str, str
     konami_id = cid_input["value"]
     # Exclude any LEGEND badges
     name = next(name_span.strings).strip()
-    text = replace_text_breaks(text_dd)
+    # Rush Duel Ritual non-Effect monsters have a blank text box
+    text = replace_text_breaks(text_dd) if text_dd else ""
 
     if with_pendulum:
         pendulum_span = div.select_one("span.box_card_pen_effect")
